@@ -8,7 +8,7 @@ import (
 )
 
 const address = "0.0.0.0:12345"
-const network = "tcp4"
+const protocol = "tcp4"
 
 // Go-Поговорки
 var proverbs = []string{
@@ -35,7 +35,7 @@ var proverbs = []string{
 
 func main() {
 	// Запуск сетевой службы по протоколу TCP
-	listener, err := net.Listen(network, address)
+	listener, err := net.Listen(protocol, address)
 	if err != nil {
 		log.Fatal(err)
 	}
